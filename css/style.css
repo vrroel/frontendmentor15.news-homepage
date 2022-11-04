@@ -132,6 +132,16 @@ p {
   background: var(--very-dark-blue);
 }
 
+picture,
+.old-articles__item-img {
+  overflow: hidden;
+}
+
+.scalable-img:hover {
+  transform: scale(1.1);
+  transition: all 0.6s;
+}
+
 /* ASIDE/NEW ARTICLE */
 .new-articles {
   grid-column: 3/-1;
@@ -258,7 +268,7 @@ p {
       rgba(0, 0, 0, 0.75) 33%,
       rgb(255, 255, 255) 0
     );
-    animation: animationMenu .1s forwards ;
+    animation: animationMenu 0.1s forwards;
   }
 
   @keyframes animationMenu {
@@ -297,7 +307,6 @@ p {
   display: flex;
 }
 
-
 /* attribution */
 
 .attribution {
@@ -312,6 +321,6 @@ p {
   font-weight: bold;
 }
 
-.attribution a:hover{
-  color:var(--soft-red) ;
+.attribution a:hover {
+  color: var(--soft-red);
 }
