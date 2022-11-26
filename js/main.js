@@ -1,14 +1,10 @@
-function initMenuMobile() {
-  const menuMobile = document.querySelector(".header-nav");
-  const menuOpen = document.querySelector(".menu-mobile-open");
-  const menuClose = document.querySelector(".menu-mobile-close");
+const btnMobile = document.getElementById("btn-mobile");
+const btnMobileClose = document.getElementById('btn-close');
 
-  if (menuOpen) {
-    function openCloseMenu() {
-      menuMobile.classList.toggle("active");
-    }
-    menuOpen.addEventListener("click", openCloseMenu);
-    menuClose.addEventListener("click", openCloseMenu);
-  }
+function toggleMenu() {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle('active');
 }
-initMenuMobile();
+
+btnMobile.addEventListener("click", toggleMenu);
+btnMobileClose.addEventListener("click", toggleMenu);
